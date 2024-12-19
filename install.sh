@@ -68,6 +68,10 @@ cd ..
 rm -rf swww
 swww img ./wallpaper/wallpaper.png
 
+# GTK
+curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py"
+python3 install.py mocha peach
+
 # Starship
 cargo install starship --locked
 

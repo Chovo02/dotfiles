@@ -12,7 +12,7 @@ end
 
 config.color_scheme = "catppuccin-mocha"
 config.default_prog = { "zsh" }
-config.font = wezterm.font("CaskaydiaCove NF")
+config.font = wezterm.font("MesloLGS Nerd Font")
 config.font_size = 12.5
 
 config.enable_tab_bar = false

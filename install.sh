@@ -1,4 +1,4 @@
-sudo apt-get install build-essential procps curl file git stow
+sudo apt-get install build-essential procps curl file git stow 
 sudo apt install zsh -y
 chsh -s $(which zsh)
 stow .zshrc
@@ -61,9 +61,14 @@ ln -s $(pwd)/Hyprshot/hyprshot $HOME/.local/bin
 chmod +x Hyprshot/hyprshot
 stow hypr waybar
 sudo apt install sway-notification-center
+git clone https://github.com/LGFae/swww.git
+cd swww
+cargo build --release
+cd ..
+rm -rf swww
+swww img ./wallpaper/wallpaper.png
 
 # Starship
 cargo install starship --locked
-echo "eval "$(starship init zsh)"" > .zshrc
 
 source /home/chovo/.zshrc

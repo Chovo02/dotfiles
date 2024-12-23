@@ -1,7 +1,7 @@
 sudo apt-get install build-essential procps curl file git stow 
 sudo apt install zsh -y
 chsh -s $(which zsh)
-stow .zshrc
+stow zsh
 
 # Fonts
 declare -a fonts=(
@@ -71,8 +71,21 @@ swww img ./wallpaper/wallpaper.png
 # GTK
 curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py"
 python3 install.py mocha peach
+git clone https://github.com/nwg-piotr/nwg-look.git
+cd nwg-look
+make build
 
+# Lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit -D -t /usr/local/bin/
+
+#Rofi
+git clone https://github.com/catppuccin/rofi && cd rofi/deathemonic
+cp -r * ~/.config/rofi
 # Starship
 cargo install starship --locked
+stow starship
 
 source /home/chovo/.zshrc

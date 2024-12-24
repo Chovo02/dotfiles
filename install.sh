@@ -3,6 +3,10 @@ sudo apt install zsh -y
 chsh -s $(which zsh)
 stow zsh
 
+# Zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+
 # Fonts
 declare -a fonts=(
     Meslo
@@ -70,8 +74,7 @@ swww img ./wallpaper/wallpaper.png
 
 # GTK
 curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py"
-python3 install.py mocha peach
-git clone https://github.com/nwg-piotr/nwg-look.git
+python3 install.py mocha peach git clone https://github.com/nwg-piotr/nwg-look.git
 cd nwg-look
 make build
 
@@ -81,6 +84,12 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/downl
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 
+# BTOP
+sudo snap install btop
+
+# Eza
+sudo apt install -y eza
+
 #Rofi
 git clone https://github.com/catppuccin/rofi && cd rofi/deathemonic
 cp -r * ~/.config/rofi
@@ -88,4 +97,4 @@ cp -r * ~/.config/rofi
 cargo install starship --locked
 stow starship
 
-source /home/chovo/.zshrc
+source ~/.zshrc

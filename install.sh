@@ -103,6 +103,12 @@ export FZF_DEFAULT_OPTS=" \
 go install -ldflags="-s -w" github.com/eeeXun/gtt@latest
 export PATH=$PATH:$HOME/go/bin
 
+# ollama
+curl -fsSL https://ollama.com/install.sh | zsh
+
+# zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
+
 #bat
 sudo apt install bat
 

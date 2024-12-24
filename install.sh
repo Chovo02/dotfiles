@@ -90,6 +90,10 @@ sudo snap install btop
 # Eza
 sudo apt install -y eza
 
+# fzf
+sudo apt install fzf
+
+
 #Rofi
 git clone https://github.com/catppuccin/rofi && cd rofi/deathemonic
 cp -r * ~/.config/rofi

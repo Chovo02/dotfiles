@@ -92,7 +92,19 @@ sudo apt install -y eza
 
 # fzf
 sudo apt install fzf
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
 
+# gtt
+go install -ldflags="-s -w" github.com/eeeXun/gtt@latest
+export PATH=$PATH:$HOME/go/bin
+
+#bat
+sudo apt install bat
 
 #Rofi
 git clone https://github.com/catppuccin/rofi && cd rofi/deathemonic

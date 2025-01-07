@@ -109,6 +109,10 @@ curl -fsSL https://ollama.com/install.sh | zsh
 # zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
 
+# tmux
+sudo apt install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 #bat
 sudo apt install bat
 

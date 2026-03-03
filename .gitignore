@@ -1,0 +1,52 @@
+# Secrets and environment variables
+.env
+.env.*
+*.secret
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Tmux plugins (installed via TPM)
+.tmux/plugins/*
+!.tmux/plugins/tpm
+
+# Zsh plugins (installed via git)
+.zsh/zsh-autosuggestions/
+.zsh/zsh-syntax-highlighting/
+
+# Node modules
+node_modules/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Cache directories
+.cache/
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+
+# Fonts (downloaded during install)
+fonts/
+*.zip
+
+# Installation artifacts
+nvim-linux64.tar.gz
+lazygit.tar.gz
+lazygit
+install.py
+packages.microsoft.gpg

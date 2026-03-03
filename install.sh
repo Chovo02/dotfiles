@@ -1,4 +1,7 @@
-sudo apt-get install build-essential procps curl file git stow 
+#!/bin/bash
+set -euo pipefail
+
+sudo apt-get install build-essential procps curl file git stow
 sudo apt install zsh -y
 chsh -s $(which zsh)
 stow zsh
@@ -74,7 +77,8 @@ swww img ./wallpaper/wallpaper.png
 
 # GTK
 curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py"
-python3 install.py mocha peach git clone https://github.com/nwg-piotr/nwg-look.git
+python3 install.py mocha peach
+git clone https://github.com/nwg-piotr/nwg-look.git
 cd nwg-look
 make build
 
